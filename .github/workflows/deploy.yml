@@ -17,7 +17,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
       - run: npm ci
       - run: npx expo export --platform web
       - run: touch dist/.nojekyll  # Critical for Expo on GitHub Pages
