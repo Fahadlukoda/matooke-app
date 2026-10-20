@@ -2,6 +2,9 @@
   "expo": {
     "name": "Team Matooke",
     "slug": "matooke-app",
+    "experiments": {
+      "baseUrl": "/matooke-app"
+    },
     "version": "0.1.0",
     "orientation": "portrait",
     "scheme": "matooke",
@@ -21,7 +24,10 @@
         "NSLocationWhenInUseUsageDescription": "Team Matooke uses your location to track your runs and show your route.",
         "NSLocationAlwaysAndWhenInUseUsageDescription": "Team Matooke records your route in the background so your run is saved even when the screen is off.",
         "NSMotionUsageDescription": "Team Matooke counts your steps during runs.",
-        "UIBackgroundModes": ["location", "fetch"]
+        "UIBackgroundModes": [
+          "location",
+          "fetch"
+        ]
       }
     },
     "android": {
@@ -56,7 +62,7 @@
         {
           "android": {
             "minSdkVersion": 24,
-            "compileSdkVersion": 35,
+            "compileSdkVersion": 36,
             "targetSdkVersion": 35
           },
           "ios": {
@@ -64,6 +70,11 @@
           }
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "b3a20468-9d75-466b-a07f-b162afd88282"
+      }
+    }
   }
 }
