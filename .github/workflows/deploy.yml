@@ -19,6 +19,11 @@ jobs:
           node-version: 20
       - run: npm ci
       - run: npx expo export --platform web
+        env:
+          EXPO_PUBLIC_SUPABASE_URL: ${{ secrets.EXPO_PUBLIC_SUPABASE_URL }}
+          EXPO_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.EXPO_PUBLIC_SUPABASE_ANON_KEY }}
+          EXPO_PUBLIC_POSTHOG_KEY: ${{ secrets.EXPO_PUBLIC_POSTHOG_KEY }}
+          EXPO_PUBLIC_POSTHOG_HOST: ${{ secrets.EXPO_PUBLIC_POSTHOG_HOST }}
       - run: touch dist/.nojekyll  # Critical for Expo on GitHub Pages
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
